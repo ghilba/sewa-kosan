@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "64f85c7b-316d-42b3-89aa-902e8e387ed4",
+		"name": "sewa kosan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "get customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/customers/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Audi\",\r\n    \"phone_number\": \"08123456789\",\r\n    \"address\" : \"dihati dia\",\r\n    \"created_at\" :\"Wed Dec 22 2021 17:42:25 GMT+0700 (Waktu Indonesia Barat)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/customers/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/customers/61c30494cc210ce8c23d1ca0",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"61c30494cc210ce8c23d1ca0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadById customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/customers/61c30130e593f1522681b19a",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"61c30130e593f1522681b19a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update customer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"_id\": \"61c30130e593f1522681b19a\",\r\n    \"name\": \"ghilba qinthara djodha\",\r\n    \"phone_number\": \"08123456789\",\r\n    \"address\": \"mangalayang regency\",\r\n    \"created_at\": \"2021-12-22T10:42:25.000Z\",\r\n    \"__v\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/customers/61c30130e593f1522681b19a",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"61c30130e593f1522681b19a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "location",
+			"item": [
+				{
+					"name": "get location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/location/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"location",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"kamar 02\",\r\n    \"price\": \"450000\",\r\n    \"capacity\": \"1\",\r\n    \"size\": \"5x4 meter\",\r\n    \"addres\": \"jalan kenangan no 2\",\r\n    \"created_at\": \"Wed Dec 22 2021 17:42:25 GMT+0700 (Waktu Indonesia Barat)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/location/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"location",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete location",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/location/61c31210b41870f6763e245c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"location",
+								"61c31210b41870f6763e245c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/location/61c311dfb41870f6763e2459",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"location",
+								"61c311dfb41870f6763e2459"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update location",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"_id\": \"61c311dfb41870f6763e2459\",\r\n    \"name\": \"kamar 01\",\r\n    \"price\": \"500000\",\r\n    \"capacity\": \"1\",\r\n    \"size\": \"6x6 meter\",\r\n    \"created_at\": \"2021-12-22T10:42:25.000Z\",\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/location/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"location",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "get transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/transaction/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transaction",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transaction_date\": \"Wed Dec 22 2021 17:42:25 GMT+0700 (Waktu Indonesia Barat)\",\r\n    \"total\": \"1000000\",\r\n    \"payment_price\": \"1000000\",\r\n    \"change\": \"0\",\r\n    \"customer\": \"61c3173db72f56bfeb3ebd78\",\r\n    \"created_at\": \"Wed Dec 22 2021 17:42:25 GMT+0700 (Waktu Indonesia Barat)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/transaction/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transaction",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete transaction",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/transaction/61c316fdb72f56bfeb3ebd75",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transaction",
+								"61c316fdb72f56bfeb3ebd75"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadById transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/transaction/61c316fdb72f56bfeb3ebd75",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transaction",
+								"61c316fdb72f56bfeb3ebd75"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update transaction",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transaction_date\": \"Wed Dec 23 2021 17:42:25 GMT+0700 (Waktu Indonesia Barat)\",\r\n    \"total\": \"1000000\",\r\n    \"payment_price\": \"1000000\",\r\n    \"change\": \"0\",\r\n    \"customer\": \"61c3173db72f56bfeb3ebd78\",\r\n    \"created_at\": \"Wed Dec 22 2021 17:42:25 GMT+0700 (Waktu Indonesia Barat)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/transaction/61c31d40ae30ae06ea1740f6",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transaction",
+								"61c31d40ae30ae06ea1740f6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}

@@ -45,8 +45,11 @@ const Transaction = mongoose.model(
 const TransactionDetail = mongoose.model(
     'TransactionDetail',
     mongoose.Schema({
-        transaction_id: Number,
-        location_id: Number,
+        transaction_id: String,
+        location: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Location',
+        },
         start: Date,
         end: Date,
         subtotal: Number,

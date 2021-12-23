@@ -1,4 +1,4 @@
-import { Customer, Location, Transaction } from "./models.js"
+import { Customer, Location, Transaction, TransactionDetail } from "./models.js"
 
 export const CustomerController = {
     readAll: async (req, res) => {
@@ -118,9 +118,27 @@ export const TransactionController = {
     },
     save: async (req, res) => {
         try {
-            const transaction = new Transaction(req.body)
-            await transaction.save()
-            res.status(201).json({message: "Berhasil menyimpan Transaction"})
+            await TransactionDetail.insertMany(req.body.transaction_details).then(async (items)=>{
+                const transactionId = []
+
+                items.map((item) => {
+                    transactionId.push(item.id)
+                })
+
+                const transaction = new Transaction({
+                    transaction_date: new Date,
+                    total: req.body.total,
+                    payment_price: req.body.payment_price,
+                    change: req.body.change,
+                    customer: req.body.customer,
+                    transaction_details: transactionId,
+                    created_at: new Date(),
+                })
+
+                await transaction.save()
+
+                res.status(201).json({message: "Success save transaction", data:transaction})
+            })
         } catch (error) {
             res.status(500).json({message: error})
         }
